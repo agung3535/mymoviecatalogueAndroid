@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_10sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgView"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="@dimen/_5sdp"
+            app:strokeWidth="0dp"
+            app:strokeColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundedSquare"
+            />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spiderman"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintStart_toEndOf="@id/imgView"/>
+
+        <ImageView
+            android:id="@+id/icPopular"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/ic_baseline_thumb_up_24"
+            app:layout_constraintStart_toEndOf="@id/imgView"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"/>
+
+        <TextView
+            android:id="@+id/txtPopularty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@id/icPopular"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MyMovie</string>
+    <string name="movie">Movie</string>
+    <string name="tv_show">TV Show</string>
+    <string name="my_movie">My Movie</string>
+    <string name="my_show">My Show</string>
+    <string name="nama_film">Nama Film</string>
+    <string name="popular">10.000</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="detail_movie">Detail Movie</string>
+    <string name="action">Action</string>
+    <string name="overview">Overview</string>
+    <string name="description">Description</string>
+    <string name="title_film">Film Apapun Itu</string>
+    <string name="foto_film">foto film</string>
+    <string name="foto_tv_show">foto tv show</string>
+    <string name="bahasa">bahasa</string>
+    <string name="error_notif">Terjadi Kesalahan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="no_favorite_movie">No Favorite Movie</string>
+    <string name="no_favorite_tv_show">No Favorite Tv Show</string>
+</resources>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color"
+    android:orientation="vertical"
+    tools:context=".view.activity.DetailMovieActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/tollbarCustom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_color"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_circle"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="@string/detail_movie"/>
+            <View
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:id="@+id/contentDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tollbarCustom"
+            android:visibility="invisible"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_300sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp">
+                <ImageView
+                    android:id="@+id/imgMovieDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_300sdp"
+                    android:scaleType="fitXY"
+                    android:contentDescription="@string/foto_tv_show"
+                    android:src="@mipmap/ic_launcher"/>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/title_film"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/_18ssp"
+                    />
+
+                <ImageButton
+                    android:id="@+id/favoriteBtn"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_weight="0"
+                    android:src="@drawable/ic_baseline_favorite_border_24"
+                    />
+                <ImageButton
+                    android:id="@+id/unfavoriteBtn"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_weight="0"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_baseline_favorite_24"
+                    />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recGenre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp" />
+            <TextView
+                android:id="@+id/txtOverview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="@string/overview"/>
+
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/white"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="@string/description"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
